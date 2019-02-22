@@ -12,7 +12,7 @@ output: correlation coefficients of the given input matrix
 ## Versions
 
 ### cp1
-- Sequential implementation
+- Basic sequential implementation
 
 ### cp2a
 - Instruction level parallelism utilized
@@ -24,12 +24,31 @@ output: correlation coefficients of the given input matrix
 - Fast solution with instruction level parallelism, vector operations and multithreading with OMP library
 
 
+## Instructions
+Navigate to folder of the desired implementation  
+Run png correlations with `./pngcorrelate INPUT_IMG OUTPUT1 OUTPUT2`   
+Run tests with `./cp-test` 
+Run benchmarks with `./cp-benchmark Y X Iterations` 
+
+
+
 ## Results
-Benchmarked with input size `nx * ny = 4000 * 1000` on Intel Core i7-7500U:
+(Best of 3 iterations)  
+Benchmarked with input size `ny * nx = 4000 * 1000` on Intel Core i7-7500U:
 
 | Version       | Running time  | 
 | ------------- |:-------------:| 
-| cp1           |               |
-| cp2a          |               |
-| cp2c          |               |
-| cp3a          |               |
+| cp1           | 9.812s        |
+| cp2a          | 6.082s        |
+| cp2c          | 4.954s        |
+| cp3a          | 1.123s        |
+
+  
+Benchmarked with input size `ny * nx = 3000 * 4000`(equal to 12 Megapixels image) on Intel Core i7-7500U:
+
+| Version       | Running time  | 
+| ------------- |:-------------:| 
+| cp1           | 25.884s       |
+| cp2a          | 15.969s       |
+| cp2c          | 11.735s       |
+| cp3a          |  2.902s       |
