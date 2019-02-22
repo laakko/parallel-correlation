@@ -27,7 +27,7 @@ output: correlation coefficients of the given input matrix
 ## Instructions
 Navigate to folder of the desired implementation  
 Run png correlations with `./pngcorrelate INPUT_IMG OUTPUT1 OUTPUT2`   
-Run tests with `./cp-test` 
+Run tests with `./cp-test`   
 Run benchmarks with `./cp-benchmark Y X Iterations` 
 
 
